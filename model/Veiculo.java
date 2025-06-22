@@ -2,7 +2,6 @@ package model;
 
 import java.util.*;
 
-// Classe abstrata base para veículos
 public abstract class Veiculo {
     protected String modelo;
     protected int ano;
