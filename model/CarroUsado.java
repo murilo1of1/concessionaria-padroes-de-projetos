@@ -7,7 +7,7 @@ public class CarroUsado extends Veiculo {
 
     public CarroUsado(String modelo, int ano, double precoBase, int quilometragem, String historicoRevisoes, String estadoConservacao) {
         super(modelo, ano, precoBase);
-        this.quilometragem = quilometragem;
+        this.quilometragem = quilometragem; 
         this.historicoRevisoes = historicoRevisoes;
         this.estadoConservacao = estadoConservacao;
     }
