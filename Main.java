@@ -1,5 +1,5 @@
 import model.*;
-import model.TipoVeiculo;
+import model.TipoVeiculo; 
 import factory.FabricaVeiculos;
 import strategy.*;
 import context.ContextoVendaVeiculo;

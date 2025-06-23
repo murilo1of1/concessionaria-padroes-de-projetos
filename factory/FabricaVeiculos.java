@@ -1,12 +1,11 @@
 package factory;
 
-import model.*;
+import model.*; 
 import java.util.*;
 
 public class FabricaVeiculos {
     // Factory Method para criar veículos
     public static Veiculo criarVeiculo(TipoVeiculo tipo, String modelo, int ano, double precoBase, Map<String, Object> extras) {
-        // Validações dos parâmetros essenciais
         if (modelo == null || modelo.trim().isEmpty()) {
             throw new IllegalArgumentException("O modelo do veículo não pode ser nulo ou vazio.");
         }
@@ -16,7 +15,8 @@ public class FabricaVeiculos {
         if (precoBase <= 0) {
             throw new IllegalArgumentException("O preço base do veículo deve ser um valor positivo.");
         }
-        switch (tipo) {
+
+        switch (tipo) { 
             case CARRO_NOVO:
                 String cor = (String) extras.getOrDefault("cor", "Branco");
                 List<String> opcionais = (List<String>) extras.getOrDefault("opcionais", new ArrayList<String>());
@@ -31,7 +31,6 @@ public class FabricaVeiculos {
                 String tipoMotor = (String) extras.getOrDefault("tipoMotor", "4 tempos");
                 return new Moto(modelo, ano, precoBase, cilindrada, tipoMotor);
         }
-        // Nunca será alcançado devido ao uso do enum
         throw new IllegalArgumentException("Tipo de veículo inválido.");
     }
 }
