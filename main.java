@@ -1,4 +1,5 @@
 import model.*;
+import model.TipoVeiculo;
 import factory.FabricaVeiculos;
 import strategy.*;
 import context.ContextoVendaVeiculo;
@@ -10,18 +11,18 @@ public class Main {
         Map<String, Object> extrasNovo = new HashMap<>();
         extrasNovo.put("cor", "Vermelho");
         extrasNovo.put("opcionais", Arrays.asList("Ar Condicionado", "Direção Hidráulica"));
-        Veiculo carroNovo = FabricaVeiculos.criarVeiculo("carronovo", "Civic", 2024, 120000, extrasNovo);
+        Veiculo carroNovo = FabricaVeiculos.criarVeiculo(TipoVeiculo.CARRO_NOVO, "Civic", 2024, 120000, extrasNovo);
 
         Map<String, Object> extrasUsado = new HashMap<>();
         extrasUsado.put("quilometragem", 50000);
         extrasUsado.put("historicoRevisoes", "Completo");
         extrasUsado.put("estadoConservacao", "Ótimo");
-        Veiculo carroUsado = FabricaVeiculos.criarVeiculo("carrousado", "Corolla", 2018, 80000, extrasUsado);
+        Veiculo carroUsado = FabricaVeiculos.criarVeiculo(TipoVeiculo.CARRO_USADO, "Corolla", 2018, 80000, extrasUsado);
 
         Map<String, Object> extrasMoto = new HashMap<>();
         extrasMoto.put("cilindrada", 300);
         extrasMoto.put("tipoMotor", "2 tempos");
-        Veiculo moto = FabricaVeiculos.criarVeiculo("moto", "CB300", 2023, 25000, extrasMoto);
+        Veiculo moto = FabricaVeiculos.criarVeiculo(TipoVeiculo.MOTO, "CB300", 2023, 25000, extrasMoto);
 
         System.out.println("--- Veículos Criados (Factory Method) ---");
         System.out.println(carroNovo);
