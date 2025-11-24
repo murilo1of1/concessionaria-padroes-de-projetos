@@ -9,7 +9,7 @@ public class ContextoVendaVeiculo {
 
     public ContextoVendaVeiculo(Veiculo veiculo, IPoliticaComercialStrategy politica) {
         this.veiculo = veiculo;
-        this.politica = politica;
+        this.politica = politica;   
     }
 
     public void setPolitica(IPoliticaComercialStrategy politica) {
