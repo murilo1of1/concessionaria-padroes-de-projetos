@@ -4,7 +4,7 @@ import model.Veiculo;
 import strategy.IPoliticaComercialStrategy;
 
 public class ContextoVendaVeiculo {
-    private Veiculo veiculo;
+    private Veiculo veiculo;    
     private IPoliticaComercialStrategy politica;
 
     public ContextoVendaVeiculo(Veiculo veiculo, IPoliticaComercialStrategy politica) {
